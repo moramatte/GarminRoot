@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<LangVersion>12.0</LangVersion>
+    <Nullable>annotations</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="Core.System.ServiceProcess" Version="2.0.1" />
+    <PackageReference Include="log4net" Version="2.0.17" />
+    <PackageReference Include="log4net-loggly" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.1" />
+    <PackageReference Include="MQTTnet" Version="4.3.6.1152" />
+    <PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="4.3.3.952" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
+    <PackageReference Include="System.Diagnostics.EventLog" Version="8.0.0" />
+    <PackageReference Include="System.Security.Permissions" Version="8.0.0" />
+    <PackageReference Include="TokenEvaluator.Net" Version="1.0.8" />
+    <PackageReference Include="Unity" Version="5.11.10" />
+    <PackageReference Include="Infrastructure.Analyzers" Version="1.0.3" />
+    <PackageReference Include="Testably.Abstractions" Version="10.0.0" />
+  </ItemGroup>
+</Project>
