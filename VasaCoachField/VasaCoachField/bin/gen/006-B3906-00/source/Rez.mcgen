@@ -10,6 +10,8 @@ module Rez {
     } // Drawables
 
     module Strings {
+        (:initialized) var raceTitle as ResourceId;
+        (:initialized) var dryRunTitle as ResourceId;
         (:initialized) var AppName as ResourceId;
     } // Strings
 

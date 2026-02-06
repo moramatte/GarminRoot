@@ -1,0 +1,8 @@
+<settings>
+    <setting propertyKey="@Properties.dryRun" title="@Strings.dryRunTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.race" title="@Strings.raceTitle">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+</settings>
