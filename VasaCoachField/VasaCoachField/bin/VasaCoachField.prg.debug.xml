@@ -24,58 +24,61 @@
         <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="7" lineNum="45" parent="globals/VasaCoachFieldView" pc="268435646" symbol="fetchDataFromServer"/>
         <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="7" lineNum="49" parent="globals/VasaCoachFieldView" pc="268435657" symbol="fetchDataFromServer"/>
         <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="7" lineNum="50" parent="globals/VasaCoachFieldView" pc="268435676" symbol="fetchDataFromServer"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="7" lineNum="52" parent="globals/VasaCoachFieldView" pc="268435695" symbol="fetchDataFromServer"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="7" lineNum="54" parent="globals/VasaCoachFieldView" pc="268435732" symbol="fetchDataFromServer"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="7" lineNum="58" parent="globals/VasaCoachFieldView" pc="268435747" symbol="fetchDataFromServer"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="61" parent="globals/VasaCoachFieldView" pc="268435779" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="62" parent="globals/VasaCoachFieldView" pc="268435782" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="64" parent="globals/VasaCoachFieldView" pc="268435797" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="65" parent="globals/VasaCoachFieldView" pc="268435812" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="66" parent="globals/VasaCoachFieldView" pc="268435829" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="67" parent="globals/VasaCoachFieldView" pc="268435835" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="68" parent="globals/VasaCoachFieldView" pc="268435850" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="69" parent="globals/VasaCoachFieldView" pc="268435868" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="70" parent="globals/VasaCoachFieldView" pc="268435883" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="72" parent="globals/VasaCoachFieldView" pc="268435895" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="75" parent="globals/VasaCoachFieldView" pc="268435910" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="77" parent="globals/VasaCoachFieldView" pc="268435922" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="78" parent="globals/VasaCoachFieldView" pc="268435939" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="79" parent="globals/VasaCoachFieldView" pc="268435945" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="80" parent="globals/VasaCoachFieldView" pc="268435960" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="81" parent="globals/VasaCoachFieldView" pc="268435978" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="82" parent="globals/VasaCoachFieldView" pc="268435993" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="84" parent="globals/VasaCoachFieldView" pc="268436005" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="87" parent="globals/VasaCoachFieldView" pc="268436016" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="90" parent="globals/VasaCoachFieldView" pc="268436027" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="91" parent="globals/VasaCoachFieldView" pc="268436039" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="94" parent="globals/VasaCoachFieldView" pc="268436050" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="95" parent="globals/VasaCoachFieldView" pc="268436064" symbol="onReceive"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="99" parent="globals/VasaCoachFieldView" pc="268436073" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="101" parent="globals/VasaCoachFieldView" pc="268436076" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="104" parent="globals/VasaCoachFieldView" pc="268436084" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="105" parent="globals/VasaCoachFieldView" pc="268436091" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="106" parent="globals/VasaCoachFieldView" pc="268436101" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="107" parent="globals/VasaCoachFieldView" pc="268436114" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="108" parent="globals/VasaCoachFieldView" pc="268436133" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="112" parent="globals/VasaCoachFieldView" pc="268436173" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="113" parent="globals/VasaCoachFieldView" pc="268436181" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="114" parent="globals/VasaCoachFieldView" pc="268436199" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="115" parent="globals/VasaCoachFieldView" pc="268436213" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="116" parent="globals/VasaCoachFieldView" pc="268436222" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="119" parent="globals/VasaCoachFieldView" pc="268436231" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="120" parent="globals/VasaCoachFieldView" pc="268436241" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="121" parent="globals/VasaCoachFieldView" pc="268436251" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="124" parent="globals/VasaCoachFieldView" pc="268436274" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="125" parent="globals/VasaCoachFieldView" pc="268436281" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="126" parent="globals/VasaCoachFieldView" pc="268436291" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="128" parent="globals/VasaCoachFieldView" pc="268436326" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="129" parent="globals/VasaCoachFieldView" pc="268436333" symbol="onUpdate"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldApp.mc" id="10" lineNum="12" parent="globals/VasaCoachFieldApp" pc="268436357" symbol="onStart"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldApp.mc" id="11" lineNum="20" parent="globals/VasaCoachFieldApp" pc="268436360" symbol="getInitialView"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldApp.mc" id="11" lineNum="21" parent="globals/VasaCoachFieldApp" pc="268436362" symbol="getInitialView"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldApp.mc" id="12" lineNum="7" parent="globals/VasaCoachFieldApp" pc="268436388" symbol="initialize"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldApp.mc" id="12" lineNum="8" parent="globals/VasaCoachFieldApp" pc="268436390" symbol="initialize"/>
-        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldApp.mc" id="13" lineNum="16" parent="globals/VasaCoachFieldApp" pc="268436403" symbol="onStop"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="7" lineNum="53" parent="globals/VasaCoachFieldView" pc="268435695" symbol="fetchDataFromServer"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="7" lineNum="54" parent="globals/VasaCoachFieldView" pc="268435698" symbol="fetchDataFromServer"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="7" lineNum="55" parent="globals/VasaCoachFieldView" pc="268435708" symbol="fetchDataFromServer"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="7" lineNum="58" parent="globals/VasaCoachFieldView" pc="268435725" symbol="fetchDataFromServer"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="7" lineNum="60" parent="globals/VasaCoachFieldView" pc="268435771" symbol="fetchDataFromServer"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="7" lineNum="64" parent="globals/VasaCoachFieldView" pc="268435786" symbol="fetchDataFromServer"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="67" parent="globals/VasaCoachFieldView" pc="268435818" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="68" parent="globals/VasaCoachFieldView" pc="268435821" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="70" parent="globals/VasaCoachFieldView" pc="268435836" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="71" parent="globals/VasaCoachFieldView" pc="268435851" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="72" parent="globals/VasaCoachFieldView" pc="268435868" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="73" parent="globals/VasaCoachFieldView" pc="268435874" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="74" parent="globals/VasaCoachFieldView" pc="268435889" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="75" parent="globals/VasaCoachFieldView" pc="268435907" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="76" parent="globals/VasaCoachFieldView" pc="268435922" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="78" parent="globals/VasaCoachFieldView" pc="268435934" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="81" parent="globals/VasaCoachFieldView" pc="268435949" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="83" parent="globals/VasaCoachFieldView" pc="268435961" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="84" parent="globals/VasaCoachFieldView" pc="268435978" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="85" parent="globals/VasaCoachFieldView" pc="268435984" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="86" parent="globals/VasaCoachFieldView" pc="268435999" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="87" parent="globals/VasaCoachFieldView" pc="268436017" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="88" parent="globals/VasaCoachFieldView" pc="268436032" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="90" parent="globals/VasaCoachFieldView" pc="268436044" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="93" parent="globals/VasaCoachFieldView" pc="268436055" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="96" parent="globals/VasaCoachFieldView" pc="268436066" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="97" parent="globals/VasaCoachFieldView" pc="268436078" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="100" parent="globals/VasaCoachFieldView" pc="268436089" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="8" lineNum="101" parent="globals/VasaCoachFieldView" pc="268436103" symbol="onReceive"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="105" parent="globals/VasaCoachFieldView" pc="268436112" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="107" parent="globals/VasaCoachFieldView" pc="268436115" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="110" parent="globals/VasaCoachFieldView" pc="268436123" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="111" parent="globals/VasaCoachFieldView" pc="268436130" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="112" parent="globals/VasaCoachFieldView" pc="268436140" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="113" parent="globals/VasaCoachFieldView" pc="268436153" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="114" parent="globals/VasaCoachFieldView" pc="268436172" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="118" parent="globals/VasaCoachFieldView" pc="268436212" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="119" parent="globals/VasaCoachFieldView" pc="268436220" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="120" parent="globals/VasaCoachFieldView" pc="268436238" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="121" parent="globals/VasaCoachFieldView" pc="268436252" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="122" parent="globals/VasaCoachFieldView" pc="268436261" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="125" parent="globals/VasaCoachFieldView" pc="268436270" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="126" parent="globals/VasaCoachFieldView" pc="268436280" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="127" parent="globals/VasaCoachFieldView" pc="268436290" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="130" parent="globals/VasaCoachFieldView" pc="268436313" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="131" parent="globals/VasaCoachFieldView" pc="268436320" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="132" parent="globals/VasaCoachFieldView" pc="268436330" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="134" parent="globals/VasaCoachFieldView" pc="268436365" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldView.mc" id="9" lineNum="135" parent="globals/VasaCoachFieldView" pc="268436372" symbol="onUpdate"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldApp.mc" id="10" lineNum="12" parent="globals/VasaCoachFieldApp" pc="268436396" symbol="onStart"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldApp.mc" id="11" lineNum="20" parent="globals/VasaCoachFieldApp" pc="268436399" symbol="getInitialView"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldApp.mc" id="11" lineNum="21" parent="globals/VasaCoachFieldApp" pc="268436401" symbol="getInitialView"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldApp.mc" id="12" lineNum="7" parent="globals/VasaCoachFieldApp" pc="268436427" symbol="initialize"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldApp.mc" id="12" lineNum="8" parent="globals/VasaCoachFieldApp" pc="268436429" symbol="initialize"/>
+        <entry filename="C:\\GarminRoot\\VasaCoachField\\VasaCoachField\\source\\VasaCoachFieldApp.mc" id="13" lineNum="16" parent="globals/VasaCoachFieldApp" pc="268436442" symbol="onStop"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
@@ -118,29 +121,30 @@
     <localVars>
         <entry arg="true" endPc="268435584" name="info" stackId="1" startPc="268435525"/>
         <entry endPc="268435584" name="currentTime" stackId="2" startPc="268435528"/>
-        <entry arg="true" endPc="268435778" name="info" stackId="1" startPc="268435600"/>
-        <entry endPc="268435777" name="distanceKm" stackId="2" startPc="268435603"/>
-        <entry endPc="268435777" name="speed" stackId="3" startPc="268435603"/>
-        <entry endPc="268435777" name="race" stackId="4" startPc="268435603"/>
-        <entry endPc="268435777" name="dryRun" stackId="5" startPc="268435603"/>
-        <entry endPc="268435777" name="url" stackId="6" startPc="268435603"/>
-        <entry endPc="268435777" name="options" stackId="7" startPc="268435603"/>
-        <entry arg="true" endPc="268436072" name="responseCode" stackId="1" startPc="268435779"/>
-        <entry arg="true" endPc="268436072" name="data" stackId="2" startPc="268435779"/>
-        <entry endPc="268436023" name="newSpeed" stackId="3" startPc="268435812"/>
-        <entry endPc="268436023" name="leaderDist" stackId="4" startPc="268435812"/>
-        <entry arg="true" endPc="268436356" name="dc" stackId="1" startPc="268436073"/>
-        <entry endPc="268436355" name="tempoText" stackId="2" startPc="268436076"/>
-        <entry endPc="268436169" name="minutes" stackId="3" startPc="268436101"/>
-        <entry endPc="268436169" name="seconds" stackId="4" startPc="268436101"/>
-        <entry endPc="268436355" name="bgColor" stackId="5" startPc="268436076"/>
-        <entry endPc="268436355" name="fgColor" stackId="6" startPc="268436076"/>
-        <entry endPc="268436355" name="w" stackId="7" startPc="268436076"/>
-        <entry endPc="268436355" name="h" stackId="8" startPc="268436076"/>
-        <entry endPc="268436355" name="tempoY" stackId="9" startPc="268436076"/>
-        <entry endPc="268436355" name="tempoWithUnit" stackId="10" startPc="268436076"/>
-        <entry endPc="268436355" name="leaderText" stackId="11" startPc="268436076"/>
-        <entry endPc="268436355" name="leaderY" stackId="12" startPc="268436076"/>
+        <entry arg="true" endPc="268435817" name="info" stackId="1" startPc="268435600"/>
+        <entry endPc="268435816" name="distanceKm" stackId="2" startPc="268435603"/>
+        <entry endPc="268435816" name="speed" stackId="3" startPc="268435603"/>
+        <entry endPc="268435816" name="race" stackId="4" startPc="268435603"/>
+        <entry endPc="268435816" name="dryRun" stackId="5" startPc="268435603"/>
+        <entry endPc="268435816" name="elapsedMinutes" stackId="6" startPc="268435603"/>
+        <entry endPc="268435816" name="url" stackId="7" startPc="268435603"/>
+        <entry endPc="268435816" name="options" stackId="8" startPc="268435603"/>
+        <entry arg="true" endPc="268436111" name="responseCode" stackId="1" startPc="268435818"/>
+        <entry arg="true" endPc="268436111" name="data" stackId="2" startPc="268435818"/>
+        <entry endPc="268436062" name="newSpeed" stackId="3" startPc="268435851"/>
+        <entry endPc="268436062" name="leaderDist" stackId="4" startPc="268435851"/>
+        <entry arg="true" endPc="268436395" name="dc" stackId="1" startPc="268436112"/>
+        <entry endPc="268436394" name="tempoText" stackId="2" startPc="268436115"/>
+        <entry endPc="268436208" name="minutes" stackId="3" startPc="268436140"/>
+        <entry endPc="268436208" name="seconds" stackId="4" startPc="268436140"/>
+        <entry endPc="268436394" name="bgColor" stackId="5" startPc="268436115"/>
+        <entry endPc="268436394" name="fgColor" stackId="6" startPc="268436115"/>
+        <entry endPc="268436394" name="w" stackId="7" startPc="268436115"/>
+        <entry endPc="268436394" name="h" stackId="8" startPc="268436115"/>
+        <entry endPc="268436394" name="tempoY" stackId="9" startPc="268436115"/>
+        <entry endPc="268436394" name="tempoWithUnit" stackId="10" startPc="268436115"/>
+        <entry endPc="268436394" name="leaderText" stackId="11" startPc="268436115"/>
+        <entry endPc="268436394" name="leaderY" stackId="12" startPc="268436115"/>
     </localVars>
     <deviceInfo deviceVersion="5c7ae9cf907f88c116a91dc4ffd75be9b5b7d2e9" partNumber="006-B4565-00"/>
     <annotations>
@@ -183,30 +187,30 @@
         <functionEntry accessMode="public" endPc="268435599" name="initialize" parent="VasaCoachFieldView" startPc="268435585">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435778" name="fetchDataFromServer" parent="VasaCoachFieldView" startPc="268435600">
+        <functionEntry accessMode="public" endPc="268435817" name="fetchDataFromServer" parent="VasaCoachFieldView" startPc="268435600">
             <param id="info"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436072" name="onReceive" parent="VasaCoachFieldView" startPc="268435779">
+        <functionEntry accessMode="public" endPc="268436111" name="onReceive" parent="VasaCoachFieldView" startPc="268435818">
             <param id="responseCode"/>
             <param id="data"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436356" name="onUpdate" parent="VasaCoachFieldView" startPc="268436073">
+        <functionEntry accessMode="public" endPc="268436395" name="onUpdate" parent="VasaCoachFieldView" startPc="268436112">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436359" name="onStart" parent="VasaCoachFieldApp" startPc="268436357">
+        <functionEntry accessMode="public" endPc="268436398" name="onStart" parent="VasaCoachFieldApp" startPc="268436396">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436387" name="getInitialView" parent="VasaCoachFieldApp" startPc="268436360">
+        <functionEntry accessMode="public" endPc="268436426" name="getInitialView" parent="VasaCoachFieldApp" startPc="268436399">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436402" name="initialize" parent="VasaCoachFieldApp" startPc="268436388">
+        <functionEntry accessMode="public" endPc="268436441" name="initialize" parent="VasaCoachFieldApp" startPc="268436427">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436405" name="onStop" parent="VasaCoachFieldApp" startPc="268436403">
+        <functionEntry accessMode="public" endPc="268436444" name="onStop" parent="VasaCoachFieldApp" startPc="268436442">
             <param id="state"/>
             <documentation/>
         </functionEntry>

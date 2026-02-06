@@ -49,7 +49,13 @@ class VasaCoachFieldView extends WatchUi.DataField {
         var race = Application.Properties.getValue("race");
         var dryRun = Application.Properties.getValue("dryRun");
         
-        var url = "https://vasalivefeeder.azurewebsites.net/api/TempoDelta?race=" + race + "&km=" + distanceKm + "&speed=" + speed + "&dryRun=" + dryRun;
+            // Get elapsed time in minutes
+            var elapsedMinutes = 0.0;
+            if (info.elapsedTime != null) {
+                elapsedMinutes = info.elapsedTime / 60.0;
+            }
+
+            var url = "https://vasalivefeeder.azurewebsites.net/api/TempoDelta?race=" + race + "&km=" + distanceKm + "&speed=" + speed + "&minutes=" + elapsedMinutes + "&dryRun=" + dryRun;
         
         var options = {
             :method => Communications.HTTP_REQUEST_METHOD_GET
