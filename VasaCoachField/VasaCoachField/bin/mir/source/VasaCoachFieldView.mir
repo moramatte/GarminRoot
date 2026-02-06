@@ -468,7 +468,7 @@ C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_61_93_9
     }
     [ @file = "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc"; @line = 99; @symbol_functiondef = [onUpdate,99,13,21]; @symbol_param<0> = [dc,99,22,24]; ]
     function onUpdate(dc) as Void {
-C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_start:
+C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_start:
 [ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 101 8 ]
         %tmp.1 = lgetv %dc;
         symbol [ dc %tmp.1 101 8 10 ];
@@ -476,7 +476,7 @@ C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_1
         %tmp.2 = getv function %tmp.1 :clear;
         invoke %tmp.1 %tmp.2();
 [ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 104 8 ]
-        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_stop" ]
+        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_stop" ]
         %tempoText.1 = local;
         symbol [ tempoText %tempoText.1 104 12 21 ];
         %tmp.3 = "--:--";
@@ -539,151 +539,189 @@ C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_105_30_
 C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_105_30_109_8_stop:
         goto @C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_105_8_109_8_if_end;
 C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_105_8_109_8_if_end:
-[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 111 8 ]
-        %tmp.31 = lgetv %dc;
-        symbol [ dc %tmp.31 111 8 10 ];
-        symbol [ setColor %tmp.32 111 11 19 ];
-        %tmp.32 = getv function %tmp.31 :setColor;
-        symbol [ Graphics %tmp.34 111 20 28 ];
-        %tmp.34 = getv ? :Graphics;
-        symbol [ COLOR_BLACK %tmp.35 111 29 40 ];
-        %tmp.35 = getv %tmp.34 :COLOR_BLACK;
-        symbol [ Graphics %tmp.37 111 42 50 ];
-        %tmp.37 = getv ? :Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.38 111 51 68 ];
-        %tmp.38 = getv %tmp.37 :COLOR_TRANSPARENT;
-        invoke %tmp.31 %tmp.32(%tmp.35, %tmp.38);
 [ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 112 8 ]
-        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_stop" ]
-        %w.4 = local;
-        symbol [ w %w.4 112 12 13 ];
-        %tmp.39 = lgetv %dc;
-        symbol [ dc %tmp.39 112 16 18 ];
-        symbol [ getWidth %tmp.40 112 19 27 ];
-        %tmp.40 = getv function %tmp.39 :getWidth;
-        %tmp.41 = invoke %tmp.39 %tmp.40();
-        lputv %w.4 %tmp.41;
-        symbol [ w %w.4 112 12 13 ];
+        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_stop" ]
+        %bgColor.4 = local;
+        symbol [ bgColor %bgColor.4 112 12 19 ];
+        %tmp.31 = self;
+        symbol [ getBackgroundColor %tmp.32 112 22 40 ];
+        %tmp.32 = getv function %tmp.31 :getBackgroundColor;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        lputv %bgColor.4 %tmp.33;
+        symbol [ bgColor %bgColor.4 112 12 19 ];
 [ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 113 8 ]
-        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_stop" ]
-        %h.5 = local;
-        symbol [ h %h.5 113 12 13 ];
-        %tmp.42 = lgetv %dc;
-        symbol [ dc %tmp.42 113 16 18 ];
-        symbol [ getHeight %tmp.43 113 19 28 ];
-        %tmp.43 = getv function %tmp.42 :getHeight;
-        %tmp.44 = invoke %tmp.42 %tmp.43();
-        lputv %h.5 %tmp.44;
-        symbol [ h %h.5 113 12 13 ];
+        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_stop" ]
+        %fgColor.5 = local;
+        symbol [ fgColor %fgColor.5 113 12 19 ];
+C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_113_22_113_90_begin:
+        %tmp.34 = lgetv %bgColor.4;
+        symbol [ bgColor %tmp.34 113 23 30 ];
+        symbol [ Graphics %tmp.36 113 34 42 ];
+        %tmp.36 = getv ? :Graphics;
+        symbol [ COLOR_BLACK %tmp.37 113 43 54 ];
+        %tmp.37 = getv %tmp.36 :COLOR_BLACK;
+        %tmp.38 = eq %tmp.34 %tmp.37;
+        bf %tmp.38 @C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_113_22_113_90_else_false;
+C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_113_22_113_90_true:
+        symbol [ Graphics %tmp.40 113 58 66 ];
+        %tmp.40 = getv ? :Graphics;
+        symbol [ COLOR_WHITE %tmp.41 113 67 78 ];
+        %tmp.41 = getv %tmp.40 :COLOR_WHITE;
+        push %tmp.41;
+        goto @C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_113_22_113_90_end;
+C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_113_22_113_90_else_false:
+        symbol [ Graphics %tmp.43 113 81 89 ];
+        %tmp.43 = getv ? :Graphics;
+        symbol [ COLOR_BLACK %tmp.44 113 90 101 ];
+        %tmp.44 = getv %tmp.43 :COLOR_BLACK;
+        push %tmp.44;
+C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_113_22_113_90_end:
+        %tmp.45 = phi [%tmp.38 @C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_113_22_113_90_begin] [%tmp.41 @C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_113_22_113_90_true] [%tmp.44 @C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_113_22_113_90_else_false] [%tmp.45 @C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_113_22_113_90_end];
+        lputv %fgColor.5 %tmp.45;
+        symbol [ fgColor %fgColor.5 113 12 19 ];
+[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 114 8 ]
+        %tmp.46 = lgetv %dc;
+        symbol [ dc %tmp.46 114 8 10 ];
+        symbol [ setColor %tmp.47 114 11 19 ];
+        %tmp.47 = getv function %tmp.46 :setColor;
+        %tmp.48 = lgetv %fgColor.5;
+        symbol [ fgColor %tmp.48 114 20 27 ];
+        symbol [ Graphics %tmp.50 114 29 37 ];
+        %tmp.50 = getv ? :Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.51 114 38 55 ];
+        %tmp.51 = getv %tmp.50 :COLOR_TRANSPARENT;
+        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.51);
+[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 115 8 ]
+        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_stop" ]
+        %w.6 = local;
+        symbol [ w %w.6 115 12 13 ];
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 115 16 18 ];
+        symbol [ getWidth %tmp.53 115 19 27 ];
+        %tmp.53 = getv function %tmp.52 :getWidth;
+        %tmp.54 = invoke %tmp.52 %tmp.53();
+        lputv %w.6 %tmp.54;
+        symbol [ w %w.6 115 12 13 ];
 [ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 116 8 ]
-        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_stop" ]
-        %tempoY.6 = local;
-        symbol [ tempoY %tempoY.6 116 12 18 ];
-        %tmp.45 = lgetv %h.5;
-        symbol [ h %tmp.45 116 21 22 ];
-        %tmp.46 = 2;
-        %tmp.47 = div %tmp.45 %tmp.46;
-        %tmp.48 = 35;
-        %tmp.49 = sub %tmp.47 %tmp.48;
-        lputv %tempoY.6 %tmp.49;
-        symbol [ tempoY %tempoY.6 116 12 18 ];
-[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 117 8 ]
-        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_stop" ]
-        %tempoWithUnit.7 = local;
-        symbol [ tempoWithUnit %tempoWithUnit.7 117 12 25 ];
-        %tmp.50 = lgetv %tempoText.1;
-        symbol [ tempoText %tmp.50 117 28 37 ];
-        %tmp.51 = " min/km";
-        %tmp.52 = add %tmp.50 %tmp.51;
-        lputv %tempoWithUnit.7 %tmp.52;
-        symbol [ tempoWithUnit %tempoWithUnit.7 117 12 25 ];
-[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 118 8 ]
-        %tmp.53 = lgetv %dc;
-        symbol [ dc %tmp.53 118 8 10 ];
-        symbol [ drawText %tmp.54 118 11 19 ];
-        %tmp.54 = getv function %tmp.53 :drawText;
-        %tmp.55 = lgetv %w.4;
-        symbol [ w %tmp.55 118 20 21 ];
-        %tmp.56 = 2;
-        %tmp.57 = div %tmp.55 %tmp.56;
-        %tmp.58 = lgetv %tempoY.6;
-        symbol [ tempoY %tmp.58 118 25 31 ];
-        symbol [ Graphics %tmp.60 118 33 41 ];
-        %tmp.60 = getv ? :Graphics;
-        symbol [ FONT_LARGE %tmp.61 118 42 52 ];
-        %tmp.61 = getv %tmp.60 :FONT_LARGE;
-        %tmp.62 = lgetv %tempoWithUnit.7;
-        symbol [ tempoWithUnit %tmp.62 118 54 67 ];
-        symbol [ Graphics %tmp.64 118 69 77 ];
-        %tmp.64 = getv ? :Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.65 118 78 97 ];
-        %tmp.65 = getv %tmp.64 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.53 %tmp.54(%tmp.57, %tmp.58, %tmp.61, %tmp.62, %tmp.65);
+        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_stop" ]
+        %h.7 = local;
+        symbol [ h %h.7 116 12 13 ];
+        %tmp.55 = lgetv %dc;
+        symbol [ dc %tmp.55 116 16 18 ];
+        symbol [ getHeight %tmp.56 116 19 28 ];
+        %tmp.56 = getv function %tmp.55 :getHeight;
+        %tmp.57 = invoke %tmp.55 %tmp.56();
+        lputv %h.7 %tmp.57;
+        symbol [ h %h.7 116 12 13 ];
+[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 119 8 ]
+        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_stop" ]
+        %tempoY.8 = local;
+        symbol [ tempoY %tempoY.8 119 12 18 ];
+        %tmp.58 = lgetv %h.7;
+        symbol [ h %tmp.58 119 21 22 ];
+        %tmp.59 = 2;
+        %tmp.60 = div %tmp.58 %tmp.59;
+        %tmp.61 = 35;
+        %tmp.62 = sub %tmp.60 %tmp.61;
+        lputv %tempoY.8 %tmp.62;
+        symbol [ tempoY %tempoY.8 119 12 18 ];
+[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 120 8 ]
+        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_stop" ]
+        %tempoWithUnit.9 = local;
+        symbol [ tempoWithUnit %tempoWithUnit.9 120 12 25 ];
+        %tmp.63 = lgetv %tempoText.1;
+        symbol [ tempoText %tmp.63 120 28 37 ];
+        %tmp.64 = " min/km";
+        %tmp.65 = add %tmp.63 %tmp.64;
+        lputv %tempoWithUnit.9 %tmp.65;
+        symbol [ tempoWithUnit %tempoWithUnit.9 120 12 25 ];
 [ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 121 8 ]
-        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_stop" ]
-        %leaderText.8 = local;
-        symbol [ leaderText %leaderText.8 121 12 22 ];
-        %tmp.66 = "Leader: -- km";
-        lputv %leaderText.8 %tmp.66;
-        symbol [ leaderText %leaderText.8 121 12 22 ];
-[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 122 8 ]
-C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_122_8_124_8_if_stmt:
-        symbol [ leaderDistanceKm %tmp.68 122 12 28 ];
-        %tmp.68 = getv ? :leaderDistanceKm;
-        %tmp.69 = 0;
-        %tmp.70 = gt %tmp.68 %tmp.69;
-        bf %tmp.70 @C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_122_8_124_8_if_end;
-C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_122_8_124_8_if_true:
-C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_122_34_124_8_start:
-[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 123 12 ]
-        %tmp.71 = "Leader: ";
-        symbol [ leaderDistanceKm %tmp.73 123 38 54 ];
-        %tmp.73 = getv ? :leaderDistanceKm;
-        symbol [ format %tmp.74 123 55 61 ];
-        %tmp.74 = getv function %tmp.73 :format;
-        %tmp.75 = "%.2f";
-        %tmp.76 = invoke %tmp.73 %tmp.74(%tmp.75);
-        %tmp.77 = add %tmp.71 %tmp.76;
-        %tmp.78 = " km";
-        %tmp.79 = add %tmp.77 %tmp.78;
-        lputv %leaderText.8 %tmp.79;
-        symbol [ leaderText %leaderText.8 123 12 22 ];
-C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_122_34_124_8_stop:
-        goto @C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_122_8_124_8_if_end;
-C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_122_8_124_8_if_end:
+        %tmp.66 = lgetv %dc;
+        symbol [ dc %tmp.66 121 8 10 ];
+        symbol [ drawText %tmp.67 121 11 19 ];
+        %tmp.67 = getv function %tmp.66 :drawText;
+        %tmp.68 = lgetv %w.6;
+        symbol [ w %tmp.68 121 20 21 ];
+        %tmp.69 = 2;
+        %tmp.70 = div %tmp.68 %tmp.69;
+        %tmp.71 = lgetv %tempoY.8;
+        symbol [ tempoY %tmp.71 121 25 31 ];
+        symbol [ Graphics %tmp.73 121 33 41 ];
+        %tmp.73 = getv ? :Graphics;
+        symbol [ FONT_LARGE %tmp.74 121 42 52 ];
+        %tmp.74 = getv %tmp.73 :FONT_LARGE;
+        %tmp.75 = lgetv %tempoWithUnit.9;
+        symbol [ tempoWithUnit %tmp.75 121 54 67 ];
+        symbol [ Graphics %tmp.77 121 69 77 ];
+        %tmp.77 = getv ? :Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.78 121 78 97 ];
+        %tmp.78 = getv %tmp.77 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.66 %tmp.67(%tmp.70, %tmp.71, %tmp.74, %tmp.75, %tmp.78);
+[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 124 8 ]
+        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_stop" ]
+        %leaderText.10 = local;
+        symbol [ leaderText %leaderText.10 124 12 22 ];
+        %tmp.79 = "Leader: -- km";
+        lputv %leaderText.10 %tmp.79;
+        symbol [ leaderText %leaderText.10 124 12 22 ];
 [ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 125 8 ]
-        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_stop" ]
-        %leaderY.9 = local;
-        symbol [ leaderY %leaderY.9 125 12 19 ];
-        %tmp.80 = lgetv %tempoY.6;
-        symbol [ tempoY %tmp.80 125 22 28 ];
-        %tmp.81 = 55;
-        %tmp.82 = add %tmp.80 %tmp.81;
-        lputv %leaderY.9 %tmp.82;
-        symbol [ leaderY %leaderY.9 125 12 19 ];
-[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 126 8 ]
-        %tmp.83 = lgetv %dc;
-        symbol [ dc %tmp.83 126 8 10 ];
-        symbol [ drawText %tmp.84 126 11 19 ];
-        %tmp.84 = getv function %tmp.83 :drawText;
-        %tmp.85 = lgetv %w.4;
-        symbol [ w %tmp.85 126 20 21 ];
-        %tmp.86 = 2;
-        %tmp.87 = div %tmp.85 %tmp.86;
-        %tmp.88 = lgetv %leaderY.9;
-        symbol [ leaderY %tmp.88 126 25 32 ];
-        symbol [ Graphics %tmp.90 126 34 42 ];
-        %tmp.90 = getv ? :Graphics;
-        symbol [ FONT_SMALL %tmp.91 126 43 53 ];
-        %tmp.91 = getv %tmp.90 :FONT_SMALL;
-        %tmp.92 = lgetv %leaderText.8;
-        symbol [ leaderText %tmp.92 126 55 65 ];
-        symbol [ Graphics %tmp.94 126 67 75 ];
-        %tmp.94 = getv ? :Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.95 126 76 95 ];
-        %tmp.95 = getv %tmp.94 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.83 %tmp.84(%tmp.87, %tmp.88, %tmp.91, %tmp.92, %tmp.95);
-C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_127_4_stop:
+C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_125_8_127_8_if_stmt:
+        symbol [ leaderDistanceKm %tmp.81 125 12 28 ];
+        %tmp.81 = getv ? :leaderDistanceKm;
+        %tmp.82 = 0;
+        %tmp.83 = gt %tmp.81 %tmp.82;
+        bf %tmp.83 @C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_125_8_127_8_if_end;
+C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_125_8_127_8_if_true:
+C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_125_34_127_8_start:
+[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 126 12 ]
+        %tmp.84 = "Leader: ";
+        symbol [ leaderDistanceKm %tmp.86 126 38 54 ];
+        %tmp.86 = getv ? :leaderDistanceKm;
+        symbol [ format %tmp.87 126 55 61 ];
+        %tmp.87 = getv function %tmp.86 :format;
+        %tmp.88 = "%.2f";
+        %tmp.89 = invoke %tmp.86 %tmp.87(%tmp.88);
+        %tmp.90 = add %tmp.84 %tmp.89;
+        %tmp.91 = " km";
+        %tmp.92 = add %tmp.90 %tmp.91;
+        lputv %leaderText.10 %tmp.92;
+        symbol [ leaderText %leaderText.10 126 12 22 ];
+C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_125_34_127_8_stop:
+        goto @C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_125_8_127_8_if_end;
+C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_125_8_127_8_if_end:
+[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 128 8 ]
+        [ "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_start" "C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_stop" ]
+        %leaderY.11 = local;
+        symbol [ leaderY %leaderY.11 128 12 19 ];
+        %tmp.93 = lgetv %tempoY.8;
+        symbol [ tempoY %tmp.93 128 22 28 ];
+        %tmp.94 = 55;
+        %tmp.95 = add %tmp.93 %tmp.94;
+        lputv %leaderY.11 %tmp.95;
+        symbol [ leaderY %leaderY.11 128 12 19 ];
+[ "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc" 129 8 ]
+        %tmp.96 = lgetv %dc;
+        symbol [ dc %tmp.96 129 8 10 ];
+        symbol [ drawText %tmp.97 129 11 19 ];
+        %tmp.97 = getv function %tmp.96 :drawText;
+        %tmp.98 = lgetv %w.6;
+        symbol [ w %tmp.98 129 20 21 ];
+        %tmp.99 = 2;
+        %tmp.100 = div %tmp.98 %tmp.99;
+        %tmp.101 = lgetv %leaderY.11;
+        symbol [ leaderY %tmp.101 129 25 32 ];
+        symbol [ Graphics %tmp.103 129 34 42 ];
+        %tmp.103 = getv ? :Graphics;
+        symbol [ FONT_SMALL %tmp.104 129 43 53 ];
+        %tmp.104 = getv %tmp.103 :FONT_SMALL;
+        %tmp.105 = lgetv %leaderText.10;
+        symbol [ leaderText %tmp.105 129 55 65 ];
+        symbol [ Graphics %tmp.107 129 67 75 ];
+        %tmp.107 = getv ? :Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.108 129 76 95 ];
+        %tmp.108 = getv %tmp.107 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.96 %tmp.97(%tmp.100, %tmp.101, %tmp.104, %tmp.105, %tmp.108);
+C__GarminRoot_VasaCoachField_VasaCoachField_source_VasaCoachFieldView_mc_99_34_130_4_stop:
     }
 }
 [ @file = "C:\GarminRoot\VasaCoachField\VasaCoachField\source\VasaCoachFieldView.mc"; @line = 1; ]

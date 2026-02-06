@@ -107,8 +107,11 @@ class VasaCoachFieldView extends WatchUi.DataField {
             var seconds = ((currentDelta - minutes) * 60).toNumber();
             tempoText = minutes.format("%d") + ":" + seconds.format("%02d");
         }
-        // Set foreground color to black for text, transparent for background
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        // Adapt foreground color to background: if background is black, use white text; else use black text
+        // Use DataField.getBackgroundColor() to set best foreground color
+        var bgColor = getBackgroundColor();
+        var fgColor = (bgColor == Graphics.COLOR_BLACK) ? Graphics.COLOR_WHITE : Graphics.COLOR_BLACK;
+        dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
         var w = dc.getWidth();
         var h = dc.getHeight();
 
