@@ -16,6 +16,7 @@ class VasaCoachFieldView extends WatchUi.DataField {
     
     var currentDelta as Float = 0.0;
     var lastFetchTime as Number = 0;
+    var isLive as Boolean = false;
 
     // The given info object contains all the current workout
     // information. Calculate a value and return it in this method.
@@ -92,6 +93,12 @@ class VasaCoachFieldView extends WatchUi.DataField {
                 } else {
                     leaderDistanceKm = 0.0;
                 }
+                var liveStatus = data.get("live");
+                if (liveStatus != null && liveStatus instanceof Boolean) {
+                    isLive = liveStatus;
+                } else {
+                    isLive = false;
+                }
             } else {
                 currentDelta = -7777.0;
                 leaderDistanceKm = 0.0;
@@ -131,7 +138,15 @@ class VasaCoachFieldView extends WatchUi.DataField {
         if (leaderDistanceKm > 0) {
             leaderText = "Leader: " + leaderDistanceKm.format("%.2f") + " km";
         }
-        var leaderY = tempoY + 55;
+        var leaderY = tempoY + 55;        
+        
+        // Draw live indicator if live data is available (left of Leader text)
+        if (isLive) {
+            dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(w/2 - dc.getTextWidthInPixels(leaderText, Graphics.FONT_SMALL)/2 - 15, leaderY, Graphics.FONT_XTINY, "LIVE", Graphics.TEXT_JUSTIFY_RIGHT);
+        }
+        
+        dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
         dc.drawText(w/2, leaderY, Graphics.FONT_SMALL, leaderText, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
