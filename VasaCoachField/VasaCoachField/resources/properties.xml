@@ -1,4 +1,4 @@
 <properties>
-    <property id="dryRun" type="boolean">true</property>
-    <property id="race" type="string">test10k</property>
+    <property id="dryRun" type="boolean">false</property>
+    <property id="race" type="string">zelta</property>
 </properties>
