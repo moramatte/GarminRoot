@@ -1,4 +1,4 @@
 <properties>
     <property id="dryRun" type="boolean">false</property>
-    <property id="race" type="string">zelta</property>
+    <property id="race" type="string">vasaloppet</property>
 </properties>

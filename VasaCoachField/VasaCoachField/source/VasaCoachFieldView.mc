@@ -6,8 +6,7 @@ import Toybox.Time;
 import Toybox.WatchUi;
 
 class VasaCoachFieldView extends WatchUi.DataField {
-            var tempoRequestStartTime as Number = 0;
-        var tempoRequestInProgress as Boolean = false;
+    // Removed throttle guards
     var healthStatusOk as Boolean = true;
     var lastHealthCheckTime as Number = 0;
 
@@ -35,7 +34,7 @@ class VasaCoachFieldView extends WatchUi.DataField {
         DataField.initialize();
     }
     
-    var currentDelta as Float = 0.0;
+    var currentDelta as String = "";
     var lastFetchTime as Number = 0;
     var isLive as Boolean = false;
 
@@ -52,14 +51,10 @@ class VasaCoachFieldView extends WatchUi.DataField {
             performHealthCheck();
             lastHealthCheckTime = currentTime;
         }
-        // Fetch data every 10 seconds, only if no request is in progress
-        if ((currentTime - lastFetchTime > 10) && !tempoRequestInProgress) {
+        // Fetch data every 30 seconds
+        if (currentTime - lastFetchTime > 30) {
             fetchDataFromServer(info);
             lastFetchTime = currentTime;
-        }
-        // Reset guard if no response in 3 minutes (180 seconds)
-        if (tempoRequestInProgress && (currentTime - tempoRequestStartTime > 180)) {
-            tempoRequestInProgress = false;
         }
         // DataField expects a value, but we want to force redraw, so return 0
         return 0;
@@ -79,8 +74,11 @@ class VasaCoachFieldView extends WatchUi.DataField {
         }
 
         // Read settings
-        var race = Application.Properties.getValue("race");
-        var dryRun = Application.Properties.getValue("dryRun");
+        // var race = Application.Properties.getValue("race");
+        // var dryRun = Application.Properties.getValue("dryRun");
+
+        var race = "vasaloppet";
+        var dryRun = false;
         
             // Get elapsed time in minutes (milliseconds to minutes)
             var elapsedMinutes = 0.0;
@@ -99,27 +97,25 @@ class VasaCoachFieldView extends WatchUi.DataField {
             :method => Communications.HTTP_REQUEST_METHOD_GET
         };
         
-        tempoRequestInProgress = true;
-        tempoRequestStartTime = Time.now().value();
+        // Removed throttle guards
         Communications.makeWebRequest(url, null, options, method(:onReceive));
     }
     
     function onReceive(responseCode as Number, data as Dictionary or String or Null) as Void {
-            tempoRequestInProgress = false;
+        // Removed throttle guards
         if (responseCode == 200 && data != null) {
             // Parse JSON response with "newSpeed" and "leaderDistanceKm"
             if (data instanceof Dictionary) {
                 var newSpeed = data.get("newSpeed");
                 if (newSpeed != null) {
-                    if (newSpeed instanceof Number) {
-                        currentDelta = newSpeed.toFloat();
-                    } else if (newSpeed instanceof Float) {
+                    if (newSpeed instanceof String) {
                         currentDelta = newSpeed;
                     } else {
-                        currentDelta = -8888.0;
+                        // fallback for legacy numeric values
+                        currentDelta = newSpeed + "";
                     }
                 } else {
-                    currentDelta = -9999.0;
+                    currentDelta = "ERR";
                 }
                 var leaderDist = data.get("leaderDistanceKm");
                 if (leaderDist != null) {
@@ -140,17 +136,17 @@ class VasaCoachFieldView extends WatchUi.DataField {
                     isLive = false;
                 }
             } else {
-                currentDelta = -7777.0;
+                currentDelta = "ERR";
                 leaderDistanceKm = 0.0;
             }
         } else {
-            currentDelta = responseCode.toFloat();
+            currentDelta = "ERR";
             leaderDistanceKm = 0.0;
         }
 
-        if (currentDelta < 0) {
+        if (currentDelta != null && currentDelta instanceof String && currentDelta.find("ERR") == 0) {
             // Log error code
-            System.println("Error fetching data: " + currentDelta.format("%d"));
+            System.println("Error fetching data: " + currentDelta);
         }
     }
 
@@ -159,19 +155,12 @@ class VasaCoachFieldView extends WatchUi.DataField {
         dc.clear();
         // Draw new tempo (large font)
         var tempoText = "--:--";
-        if (currentDelta > 0) {
-            var minutes = currentDelta.toNumber();
-            var seconds = ((currentDelta - minutes) * 60).toNumber();
-            // Ensure seconds is within valid range
-            if (seconds < 0) {
-                seconds = 0;
-            } else if (seconds > 59) {
-                seconds = 59;
-            }
-            tempoText = minutes.format("%d") + ":" + seconds.format("%02d");
-        } else if (currentDelta < 0 && currentDelta > -1000) {
-            // Handle special error codes
-            tempoText = "ERR" + (-currentDelta).format("%d");
+        if (currentDelta != null && currentDelta instanceof String && currentDelta.length() > 0 && currentDelta.find(":") != -1) {
+            tempoText = currentDelta;
+        } else if (currentDelta != null && currentDelta instanceof String && currentDelta.find("ERR") == 0) {
+            tempoText = currentDelta;
+        } else {
+            tempoText = "--:--";
         }
         // Adapt foreground color to background: if background is black, use white text; else use black text
         // Use DataField.getBackgroundColor() to set best foreground color
@@ -182,36 +171,39 @@ class VasaCoachFieldView extends WatchUi.DataField {
 
         // Draw new tempo (large font) in the upper center, with unit
         var tempoY = h/2 - 35;
-        // Draw tempoText centered, then draw 'min/km' in red if health check fails
+        var liveText = "";
+        var liveFont = Graphics.FONT_SMALL;
+        var liveColor = Graphics.COLOR_DK_GRAY;
+        var tempoFont = Graphics.FONT_LARGE;
+        // Draw tempoText centered as before
         dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(w/2, tempoY, Graphics.FONT_LARGE, tempoText, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(w/2, tempoY, tempoFont, tempoText, Graphics.TEXT_JUSTIFY_CENTER);
+        // Draw LIVE indicator further left, not affecting tempo centering
+        if (isLive) {
+            liveText = "LIVE";
+            dc.setColor(liveColor, Graphics.COLOR_TRANSPARENT);
+            var liveWidth = dc.getTextWidthInPixels(liveText, liveFont);
+            var liveX = w/2 - dc.getTextWidthInPixels(tempoText, tempoFont)/2 - liveWidth - 16;
+            dc.drawText(liveX, tempoY, liveFont, liveText, Graphics.TEXT_JUSTIFY_LEFT);
+        }
         var unitText = "min/km";
-        // Draw unit right after tempoText, offset to the right
-        var tempoWidth = dc.getTextWidthInPixels(tempoText, Graphics.FONT_LARGE);
+        var tempoWidth = dc.getTextWidthInPixels(tempoText, tempoFont);
         var unitX = w/2 + tempoWidth/2 + 8;
         if (!healthStatusOk) {
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
         } else {
             dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
         }
-        dc.drawText(unitX, tempoY, Graphics.FONT_LARGE, unitText, Graphics.TEXT_JUSTIFY_LEFT);
+        dc.drawText(unitX, tempoY, tempoFont, unitText, Graphics.TEXT_JUSTIFY_LEFT);
 
         // Draw leader distance (small font) further below
         var leaderText = "Leader: -- km";
-        if (leaderDistanceKm > 0) {
+        if (leaderDistanceKm >= 0) {
             leaderText = "Leader: " + leaderDistanceKm.format("%.2f") + " km";
         } else if (leaderDistanceKm < 0) {
-            // Handle case where we're past the race distance
             leaderText = "Race Complete";
         }
-        var leaderY = tempoY + 55;        
-        
-        // Draw live indicator if live data is available (left of Leader text)
-        if (isLive) {
-            dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(w/2 - dc.getTextWidthInPixels(leaderText, Graphics.FONT_SMALL)/2 - 15, leaderY, Graphics.FONT_XTINY, "LIVE", Graphics.TEXT_JUSTIFY_RIGHT);
-        }
-        
+        var leaderY = tempoY + 55;
         dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
         dc.drawText(w/2, leaderY, Graphics.FONT_SMALL, leaderText, Graphics.TEXT_JUSTIFY_CENTER);
     }
