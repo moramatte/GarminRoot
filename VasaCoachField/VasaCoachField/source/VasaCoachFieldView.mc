@@ -77,7 +77,7 @@ class VasaCoachFieldView extends WatchUi.DataField {
         // var race = Application.Properties.getValue("race");
         // var dryRun = Application.Properties.getValue("dryRun");
 
-        var race = "vasaloppet";
+        var race = "birken";
         var dryRun = false;
         
             // Get elapsed time in minutes (milliseconds to minutes)
@@ -115,7 +115,7 @@ class VasaCoachFieldView extends WatchUi.DataField {
                         currentDelta = newSpeed + "";
                     }
                 } else {
-                    currentDelta = "ERR";
+                    currentDelta = "ERR:NoSpeed";
                 }
                 var leaderDist = data.get("leaderDistanceKm");
                 if (leaderDist != null) {
@@ -136,11 +136,11 @@ class VasaCoachFieldView extends WatchUi.DataField {
                     isLive = false;
                 }
             } else {
-                currentDelta = "ERR";
+                currentDelta = "ERR:NoDict";
                 leaderDistanceKm = 0.0;
             }
         } else {
-            currentDelta = "ERR";
+            currentDelta = "ERR:" + responseCode;
             leaderDistanceKm = 0.0;
         }
 
