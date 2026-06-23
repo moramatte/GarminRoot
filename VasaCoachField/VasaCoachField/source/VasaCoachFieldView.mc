@@ -76,9 +76,11 @@ class VasaCoachFieldView extends WatchUi.DataField {
         // Read settings
         // var race = Application.Properties.getValue("race");
         // var dryRun = Application.Properties.getValue("dryRun");
+        // var medalTimePct = Application.Properties.getValue("medalTimePct");
 
         var race = "birken";
         var dryRun = false;
+        var medalTimePct = 50;
         
             // Get elapsed time in minutes (milliseconds to minutes)
             var elapsedMinutes = 0.0;
@@ -90,7 +92,7 @@ class VasaCoachFieldView extends WatchUi.DataField {
                 elapsedMinutes = 0.000001;
             }            
 
-            var url = "https://vasalivefeeder.azurewebsites.net/api/TempoDelta?race=" + race + "&km=" + distanceKm + "&speed=" + speed + "&elapsed=" + elapsedMinutes + "&dryRun=" + dryRun;
+            var url = "https://vasalivefeeder.azurewebsites.net/api/TempoDelta?race=" + race + "&km=" + distanceKm + "&speed=" + speed + "&elapsed=" + elapsedMinutes + "&dryRun=" + dryRun + "&medalTimePct=" + medalTimePct;
             lastRequestUrl = url;
         
         var options = {

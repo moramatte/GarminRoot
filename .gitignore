@@ -15,3 +15,4 @@ bld/
 # Generated files
 *.prg
 *.debug.xml
+**/Builds/

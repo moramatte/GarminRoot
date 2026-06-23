@@ -1,8 +1,11 @@
-<settings>
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
     <setting propertyKey="@Properties.dryRun" title="@Strings.dryRunTitle">
         <settingConfig type="boolean" />
     </setting>
     <setting propertyKey="@Properties.race" title="@Strings.raceTitle">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+    <setting propertyKey="@Properties.medalTimePct" title="@Strings.medalTimePctTitle">
         <settingConfig type="alphaNumeric" />
     </setting>
 </settings>

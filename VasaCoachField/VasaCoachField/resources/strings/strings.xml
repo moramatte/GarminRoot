@@ -2,4 +2,6 @@
     <string id="AppName">VasaCoachField</string>
     <string id="dryRunTitle">Dry Run Mode</string>
     <string id="raceTitle">Race Name</string>
+    <string id="medalTimePctTitle">MedalTime (%)</string>
+    <string id="percentSuffix">%</string>
 </strings>
