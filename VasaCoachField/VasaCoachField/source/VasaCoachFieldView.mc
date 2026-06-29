@@ -74,13 +74,9 @@ class VasaCoachFieldView extends WatchUi.DataField {
         }
 
         // Read settings
-        // var race = Application.Properties.getValue("race");
-        // var dryRun = Application.Properties.getValue("dryRun");
-        // var medalTimePct = Application.Properties.getValue("medalTimePct");
-
-        var race = "birken";
-        var dryRun = false;
-        var medalTimePct = 50;
+        var race = Application.Properties.getValue("race");
+        var dryRun = Application.Properties.getValue("dryRun");
+        var medalTimePct = Application.Properties.getValue("medalTimePct");      
         
             // Get elapsed time in minutes (milliseconds to minutes)
             var elapsedMinutes = 0.0;
