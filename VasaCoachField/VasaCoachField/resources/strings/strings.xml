@@ -1,7 +1,22 @@
 <strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
     <string id="AppName">VasaCoachField</string>
     <string id="dryRunTitle">Dry Run Mode</string>
-    <string id="raceTitle">Race Name</string>
+    <string id="raceTitle">Race</string>
+    <string id="raceBadGasteinPrologue" scope="settings">Bad Gastein Prologue</string>
+    <string id="raceSportgasteinCriterium" scope="settings">Sportgastein Criterium</string>
+    <string id="raceBadGasteinItt" scope="settings">Bad Gastein ITT</string>
+    <string id="raceBadGasteinCriterium" scope="settings">Bad Gastein Criterium</string>
+    <string id="raceEngadinLaDiagonela" scope="settings">Engadin La Diagonela</string>
+    <string id="raceZuozStMoritzSprint" scope="settings">Zuoz - St. Moritz Sprint</string>
+    <string id="raceMarcialonga" scope="settings">Marcialonga</string>
+    <string id="raceBedrichovHeatSprint" scope="settings">Bedrichov Heat Sprint</string>
+    <string id="raceJizerska50" scope="settings">Jizerska 50</string>
+    <string id="raceOxbergMoraSprintWomen" scope="settings">Oxberg - Mora Sprint Women</string>
+    <string id="raceOxbergMoraSprintMen" scope="settings">Oxberg - Mora Sprint Men</string>
+    <string id="raceVasaloppet" scope="settings">Vasaloppet</string>
+    <string id="raceBirkebeinerrennet" scope="settings">Birkebeinerrennet</string>
+    <string id="raceReistadlopet" scope="settings">Reistadlopet</string>
+    <string id="raceGrandFinaleSummit2Senja" scope="settings">Grand Finale Summit 2 Senja</string>
     <string id="medalTimePctTitle">MedalTime (%)</string>
     <string id="percentSuffix">%</string>
 </strings>

@@ -1,5 +1,5 @@
 <properties>
     <property id="dryRun" type="boolean">false</property>
-    <property id="race" type="string">vasaloppet</property>
+    <property id="race" type="number">11</property>
     <property id="medalTimePct" type="string">50</property>
 </properties>

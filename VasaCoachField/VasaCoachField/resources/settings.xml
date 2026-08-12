@@ -3,7 +3,23 @@
         <settingConfig type="boolean" />
     </setting>
     <setting propertyKey="@Properties.race" title="@Strings.raceTitle">
-        <settingConfig type="alphaNumeric" />
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.raceBadGasteinPrologue</listEntry>
+            <listEntry value="1">@Strings.raceSportgasteinCriterium</listEntry>
+            <listEntry value="2">@Strings.raceBadGasteinItt</listEntry>
+            <listEntry value="3">@Strings.raceBadGasteinCriterium</listEntry>
+            <listEntry value="4">@Strings.raceEngadinLaDiagonela</listEntry>
+            <listEntry value="5">@Strings.raceZuozStMoritzSprint</listEntry>
+            <listEntry value="6">@Strings.raceMarcialonga</listEntry>
+            <listEntry value="7">@Strings.raceBedrichovHeatSprint</listEntry>
+            <listEntry value="8">@Strings.raceJizerska50</listEntry>
+            <listEntry value="9">@Strings.raceOxbergMoraSprintWomen</listEntry>
+            <listEntry value="10">@Strings.raceOxbergMoraSprintMen</listEntry>
+            <listEntry value="11">@Strings.raceVasaloppet</listEntry>
+            <listEntry value="12">@Strings.raceBirkebeinerrennet</listEntry>
+            <listEntry value="13">@Strings.raceReistadlopet</listEntry>
+            <listEntry value="14">@Strings.raceGrandFinaleSummit2Senja</listEntry>
+        </settingConfig>
     </setting>
     <setting propertyKey="@Properties.medalTimePct" title="@Strings.medalTimePctTitle">
         <settingConfig type="alphaNumeric" />

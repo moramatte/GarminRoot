@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(java -version *)",
+      "Bash(java -jar *)",
+      "Bash(where *)",
+      "Bash(curl -s *)",
+      "Bash(curl -L *)",
+      "Bash(curl --version)",
+      "Bash(winget --version)",
+      "Bash(winget list *)",
+      "Bash(winget search *)",
+      "Bash(unzip *)",
+      "Bash(mkdir -p *)",
+      "Bash(chmod +x *)",
+      "Bash(monkeyc *)"
+    ]
+  }
+}

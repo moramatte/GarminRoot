@@ -1,0 +1,89 @@
+name: Build and Publish to Connect IQ
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Publish to Connect IQ Store after build'
+        type: boolean
+        default: false
+
+env:
+  APP_DIR: VasaCoachField/VasaCoachField
+  APP_GUID: 75e2c3ee-4f1d-4bd9-934f-1bea49c54ddb
+  OUTPUT_NAME: VasaCoachField.iq
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # SDK is ~500 MB; cache by version to avoid re-downloading on every run.
+      # Set CIQ_SDK_VERSION as a repository variable (e.g. "7.4.3").
+      # Set CIQ_SDK_URL as a repository variable with the full Linux zip URL from
+      # https://developer.garmin.com/connect-iq/sdk/
+      - name: Cache Connect IQ SDK
+        id: cache-sdk
+        uses: actions/cache@v4
+        with:
+          path: ~/ciq-sdk
+          key: ciq-sdk-${{ vars.CIQ_SDK_VERSION }}
+
+      - name: Download Connect IQ SDK
+        if: steps.cache-sdk.outputs.cache-hit != 'true'
+        run: |
+          curl -L "${{ vars.CIQ_SDK_URL }}" -o /tmp/ciq-sdk.zip
+          mkdir -p ~/ciq-sdk
+          unzip /tmp/ciq-sdk.zip -d ~/ciq-sdk
+          chmod +x ~/ciq-sdk/bin/monkeyc
+
+      - name: Add SDK to PATH
+        run: echo "$HOME/ciq-sdk/bin" >> $GITHUB_PATH
+
+      # Encode C:\GarminProjects\developer_key as base64 and store as secret CIQ_DEVELOPER_KEY_B64:
+      #   [Convert]::ToBase64String([IO.File]::ReadAllBytes("C:\GarminProjects\developer_key")) | Set-Clipboard
+      - name: Decode developer signing key
+        run: echo "${{ secrets.CIQ_DEVELOPER_KEY_B64 }}" | base64 -d > /tmp/dev_key.der
+
+      # monkeyc --package-app builds for every device in manifest.xml
+      # and bundles them into a single .iq archive ready for store upload.
+      - name: Build IQ package
+        working-directory: ${{ env.APP_DIR }}
+        run: |
+          monkeyc \
+            -f monkey.jungle \
+            -y /tmp/dev_key.der \
+            -o ${{ env.OUTPUT_NAME }} \
+            --package-app \
+            -r
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: VasaCoachField-${{ github.ref_name || github.sha }}
+          path: ${{ env.APP_DIR }}/${{ env.OUTPUT_NAME }}
+          retention-days: 90
+
+      # Publishing only happens on a version tag push or when manually enabled.
+      # Required secrets (set in repo Settings → Secrets → Actions):
+      #   CIQ_CONSUMER_KEY         — from developer.garmin.com/connect-iq/store
+      #   CIQ_CONSUMER_SECRET      — same
+      #   CIQ_ACCESS_TOKEN         — OAuth 1.0 token for your Garmin account
+      #   CIQ_ACCESS_TOKEN_SECRET  — OAuth 1.0 token secret
+      - name: Publish to Connect IQ Store
+        if: startsWith(github.ref, 'refs/tags/') || inputs.publish == true
+        env:
+          CIQ_CONSUMER_KEY: ${{ secrets.CIQ_CONSUMER_KEY }}
+          CIQ_CONSUMER_SECRET: ${{ secrets.CIQ_CONSUMER_SECRET }}
+          CIQ_ACCESS_TOKEN: ${{ secrets.CIQ_ACCESS_TOKEN }}
+          CIQ_ACCESS_TOKEN_SECRET: ${{ secrets.CIQ_ACCESS_TOKEN_SECRET }}
+        run: |
+          python3 .github/scripts/publish_to_store.py \
+            "${{ env.APP_DIR }}/${{ env.OUTPUT_NAME }}" \
+            "${{ env.APP_GUID }}"

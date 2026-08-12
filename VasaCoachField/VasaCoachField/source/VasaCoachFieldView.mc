@@ -6,6 +6,24 @@ import Toybox.Time;
 import Toybox.WatchUi;
 
 class VasaCoachFieldView extends WatchUi.DataField {
+    const RACE_SLUGS = [
+        "bad-gastein-prologue",
+        "sportgastein-criterium",
+        "bad-gastein-itt-2",
+        "bad-gastein-criterium",
+        "engadin-la-diagonela",
+        "zuoz-st-moritz-sprint",
+        "marcialonga",
+        "bedrichov-sprint",
+        "jizerska-padesatka",
+        "oxberg-mora-sprint-women",
+        "oxberg-mora-sprint-men",
+        "vasaloppet",
+        "birkebeinerrennet",
+        "reistadlopet",
+        "summit-2-senja"
+    ];
+
     // Removed throttle guards
     var healthStatusOk as Boolean = true;
     var lastHealthCheckTime as Number = 0;
@@ -32,6 +50,23 @@ class VasaCoachFieldView extends WatchUi.DataField {
     // Set the label of the data field here.
     function initialize() {
         DataField.initialize();
+    }
+
+    function getRaceSlug() as String {
+        var raceSetting = Application.Properties.getValue("race");
+
+        if (raceSetting instanceof Number) {
+            var raceIndex = raceSetting;
+            if (raceIndex >= 0 && raceIndex < RACE_SLUGS.size()) {
+                return RACE_SLUGS[raceIndex];
+            }
+        } else if (raceSetting instanceof String) {
+            if (RACE_SLUGS.indexOf(raceSetting) != null) {
+                return raceSetting;
+            }
+        }
+
+        return "vasaloppet";
     }
     
     var currentDelta as String = "";
@@ -74,7 +109,7 @@ class VasaCoachFieldView extends WatchUi.DataField {
         }
 
         // Read settings
-        var race = Application.Properties.getValue("race");
+        var race = getRaceSlug();
         var dryRun = Application.Properties.getValue("dryRun");
         var medalTimePct = Application.Properties.getValue("medalTimePct");      
         

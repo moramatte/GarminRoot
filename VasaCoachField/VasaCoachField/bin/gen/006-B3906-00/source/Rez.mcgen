@@ -10,7 +10,9 @@ module Rez {
     } // Drawables
 
     module Strings {
+        (:initialized) var medalTimePctTitle as ResourceId;
         (:initialized) var raceTitle as ResourceId;
+        (:initialized) var percentSuffix as ResourceId;
         (:initialized) var dryRunTitle as ResourceId;
         (:initialized) var AppName as ResourceId;
     } // Strings
