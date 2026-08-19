@@ -19,4 +19,7 @@
     <string id="raceGrandFinaleSummit2Senja" scope="settings">Grand Finale Summit 2 Senja</string>
     <string id="medalTimePctTitle">MedalTime (%)</string>
     <string id="percentSuffix">%</string>
+    <string id="genderTitle">Class</string>
+    <string id="genderMen" scope="settings">Men</string>
+    <string id="genderWomen" scope="settings">Women</string>
 </strings>

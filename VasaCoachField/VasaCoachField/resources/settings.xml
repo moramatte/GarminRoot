@@ -24,4 +24,10 @@
     <setting propertyKey="@Properties.medalTimePct" title="@Strings.medalTimePctTitle">
         <settingConfig type="alphaNumeric" />
     </setting>
+    <setting propertyKey="@Properties.gender" title="@Strings.genderTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.genderMen</listEntry>
+            <listEntry value="1">@Strings.genderWomen</listEntry>
+        </settingConfig>
+    </setting>
 </settings>
