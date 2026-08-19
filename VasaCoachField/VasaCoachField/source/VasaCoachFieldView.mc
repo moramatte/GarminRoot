@@ -245,19 +245,23 @@ class VasaCoachFieldView extends WatchUi.DataField {
         }
         dc.drawText(unitX, tempoY, tempoFont, unitText, Graphics.TEXT_JUSTIFY_LEFT);
 
+        var indicatorFont = Graphics.FONT_XTINY;
+        var indicatorText = "";
+        var indicatorColor = fgColor;
         if (isOffline) {
-            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(w/2, tempoY - 18, Graphics.FONT_XTINY, "OFFLINE", Graphics.TEXT_JUSTIFY_CENTER);
+            indicatorText = "OFFLINE";
+            indicatorColor = Graphics.COLOR_RED;
         } else if (projectedDiff.length() > 0) {
-            var diffColor = fgColor;
+            indicatorText = projectedDiff;
             if (projectedDiff.find("-") == 0) {
-                diffColor = Graphics.COLOR_ORANGE;
+                indicatorColor = Graphics.COLOR_ORANGE;
             } else if (projectedDiff.find("+") == 0) {
-                diffColor = Graphics.COLOR_GREEN;
+                indicatorColor = Graphics.COLOR_GREEN;
             }
-
-            dc.setColor(diffColor, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(w/2, tempoY - 18, Graphics.FONT_XTINY, projectedDiff, Graphics.TEXT_JUSTIFY_CENTER);
+        }
+        if (indicatorText.length() > 0) {
+            dc.setColor(indicatorColor, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(w/2, tempoY - 20, indicatorFont, indicatorText, Graphics.TEXT_JUSTIFY_CENTER);
         }
 
         // Draw leader distance (small font) further below
