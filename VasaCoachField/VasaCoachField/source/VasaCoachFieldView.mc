@@ -49,6 +49,9 @@ class VasaCoachFieldView extends WatchUi.DataField {
     var projectedDiff as String = "";
     var isOffline as Boolean = false;
     var lastRequestUrl as String = "";
+    var lastElapsedMinutes as Float = 0.0;
+    var lastDistanceKm as Float = 0.0;
+    var lastCurrentDelta as String = "";
 
     // Set the label of the data field here.
     function initialize() {
@@ -130,6 +133,9 @@ class VasaCoachFieldView extends WatchUi.DataField {
 
             var url = "https://vasalivefeeder.azurewebsites.net/api/TempoDelta?race=" + race + "&km=" + distanceKm + "&speed=" + speed + "&elapsed=" + elapsedMinutes + "&dryRun=" + dryRun + "&medalTimePct=" + medalTimePct + "&gender=" + genderStr;
             lastRequestUrl = url;
+            lastElapsedMinutes = elapsedMinutes.toFloat();
+            lastDistanceKm = distanceKm.toFloat();
+            lastCurrentDelta = currentDelta;
         
         var options = {
             :method => Communications.HTTP_REQUEST_METHOD_GET
@@ -248,22 +254,52 @@ class VasaCoachFieldView extends WatchUi.DataField {
         dc.drawText(unitX, tempoY, tempoFont, unitText, Graphics.TEXT_JUSTIFY_LEFT);
 
         var indicatorFont = Graphics.FONT_XTINY;
-        var indicatorText = "";
         var indicatorColor = fgColor;
+
+        // Compute projected finish time from required pace (currentDelta) and last elapsed/distance
+        var projFinishStr = "";
+        if (projectedDiff.length() > 0 && currentDelta != null && currentDelta.find(":") != -1) {
+            var raceDistKm = getRaceDistanceKm();
+            var remaining = raceDistKm - lastDistanceKm;
+            // Parse pace from currentDelta "M:SS"
+            var colonPos = currentDelta.find(":");
+            var paceMin = 0.0;
+            if (colonPos > 0) {
+                var mStr = currentDelta.substring(0, colonPos);
+                var sStr = currentDelta.substring(colonPos + 1, currentDelta.length());
+                paceMin = mStr.toFloat() + sStr.toFloat() / 60.0;
+            }
+            if (paceMin > 0.0 && remaining > 0.0) {
+                var projTotal = lastElapsedMinutes + remaining * paceMin;
+                var projH = (projTotal / 60).toNumber();
+                var projM = (projTotal - projH * 60).toNumber();
+                projFinishStr = projH.format("%d") + ":" + projM.format("%02d");
+            }
+        }
+
+        // Top row: projectedDiff left, projected finish time right
         if (isOffline) {
-            indicatorText = "OFFLINE";
-            indicatorColor = Graphics.COLOR_RED;
-        } else if (projectedDiff.length() > 0) {
-            indicatorText = projectedDiff;
+            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(w/2, tempoY - 20, indicatorFont, "OFFLINE", Graphics.TEXT_JUSTIFY_CENTER);
+        } else {
+            // Left: projectedDiff (or placeholder)
+            var diffText = projectedDiff.length() > 0 ? projectedDiff : "--";
             if (projectedDiff.find("-") == 0) {
                 indicatorColor = Graphics.COLOR_ORANGE;
             } else if (projectedDiff.find("+") == 0) {
                 indicatorColor = Graphics.COLOR_GREEN;
+            } else {
+                indicatorColor = fgColor;
             }
-        }
-        if (indicatorText.length() > 0) {
+            var topRowY = tempoY - 20;
+            var halfGap = 72;
             dc.setColor(indicatorColor, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(w/2, tempoY - 20, indicatorFont, indicatorText, Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(w/2 - halfGap, topRowY, indicatorFont, diffText, Graphics.TEXT_JUSTIFY_RIGHT);
+
+            // Right: projected finish time — same color as diff
+            var finishText = projFinishStr.length() > 0 ? projFinishStr : "--:--";
+            dc.setColor(indicatorColor, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(w/2 + halfGap, topRowY, indicatorFont, finishText, Graphics.TEXT_JUSTIFY_LEFT);
         }
 
         // Draw leader distance (small font) further below
