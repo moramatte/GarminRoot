@@ -47,6 +47,7 @@ class VasaCoachFieldView extends WatchUi.DataField {
     var leaderDistanceKm as Float = 0.0;
     var leaderName as String = "";
     var projectedDiff as String = "";
+    var projectedFinish as String = "";
     var isOffline as Boolean = false;
     var lastRequestUrl as String = "";
     var lastElapsedMinutes as Float = 0.0;
@@ -148,6 +149,7 @@ class VasaCoachFieldView extends WatchUi.DataField {
     function onReceive(responseCode as Number, data as Dictionary or String or Null) as Void {
         // Removed throttle guards
         if (responseCode == 200 && data != null) {
+            healthStatusOk = true;
             // Parse JSON response with "newSpeed" and "leaderDistanceKm"
             if (data instanceof Dictionary) {
                 var newSpeed = data.get("newSpeed");
@@ -191,12 +193,19 @@ class VasaCoachFieldView extends WatchUi.DataField {
                 } else {
                     projectedDiff = "";
                 }
+                var projectedFinishValue = data.get("projectedFinish");
+                if (projectedFinishValue != null && projectedFinishValue instanceof String) {
+                    projectedFinish = projectedFinishValue;
+                } else {
+                    projectedFinish = "";
+                }
                 isOffline = false;
             } else {
                 currentDelta = "ERR:NoDict";
                 leaderDistanceKm = 0.0;
                 leaderName = "";
                 projectedDiff = "";
+                projectedFinish = "";
                 isOffline = true;
             }
         } else {
@@ -210,13 +219,11 @@ class VasaCoachFieldView extends WatchUi.DataField {
             leaderDistanceKm = 0.0;
             leaderName = "";
             projectedDiff = "";
+            projectedFinish = "";
         }
-
-        if (currentDelta != null && currentDelta instanceof String && currentDelta.find("ERR") == 0) {
             // Log error code
             System.println("Error fetching data: " + currentDelta);
         }
-    }
 
     function onUpdate(dc) as Void {
         // Clear background
@@ -256,27 +263,6 @@ class VasaCoachFieldView extends WatchUi.DataField {
         var indicatorFont = Graphics.FONT_XTINY;
         var indicatorColor = fgColor;
 
-        // Compute projected finish time from required pace (currentDelta) and last elapsed/distance
-        var projFinishStr = "";
-        if (projectedDiff.length() > 0 && currentDelta != null && currentDelta.find(":") != -1) {
-            var raceDistKm = getRaceDistanceKm();
-            var remaining = raceDistKm - lastDistanceKm;
-            // Parse pace from currentDelta "M:SS"
-            var colonPos = currentDelta.find(":");
-            var paceMin = 0.0;
-            if (colonPos > 0) {
-                var mStr = currentDelta.substring(0, colonPos);
-                var sStr = currentDelta.substring(colonPos + 1, currentDelta.length());
-                paceMin = mStr.toFloat() + sStr.toFloat() / 60.0;
-            }
-            if (paceMin > 0.0 && remaining > 0.0) {
-                var projTotal = lastElapsedMinutes + remaining * paceMin;
-                var projH = (projTotal / 60).toNumber();
-                var projM = (projTotal - projH * 60).toNumber();
-                projFinishStr = projH.format("%d") + ":" + projM.format("%02d");
-            }
-        }
-
         // Top row: projectedDiff left, projected finish time right
         if (isOffline) {
             dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
@@ -297,7 +283,7 @@ class VasaCoachFieldView extends WatchUi.DataField {
             dc.drawText(w/2 - halfGap, topRowY, indicatorFont, diffText, Graphics.TEXT_JUSTIFY_RIGHT);
 
             // Right: projected finish time — same color as diff
-            var finishText = projFinishStr.length() > 0 ? projFinishStr : "--:--";
+            var finishText = projectedFinish.length() > 0 ? projectedFinish : "--:--";
             dc.setColor(indicatorColor, Graphics.COLOR_TRANSPARENT);
             dc.drawText(w/2 + halfGap, topRowY, indicatorFont, finishText, Graphics.TEXT_JUSTIFY_LEFT);
         }
